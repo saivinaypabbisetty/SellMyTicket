@@ -1,0 +1,80 @@
+<div class="col-sm-8 col-md-offset-2">
+        <div class="row" *ngIf="selectedBus">
+        <h2 class="col-md text-center">{{this.from}} To {{this.to}} - {{this.selectedBus.tickets}} tickets on {{this.selectedBus.date}}</h2>
+        <hr>
+        <div class="col-md-6">
+            <label class="col-md-6">
+             From:   
+            </label>
+          <div class="col-md-4">
+              {{this.from}}
+          </div>
+        </div>
+        <div class="col-md-6"> 
+            <label class="col-md-6">
+             To:   
+            </label>
+          <div class="col-md-4">
+              {{this.to}}
+          </div>
+        </div>
+         <div class="col-md-6">
+            <label class="col-md-6">
+             Date: 
+            </label>
+          <div class="col-md-4">
+              {{this.selectedBus.date}}
+          </div>
+         </div> 
+          <div class="col-md-6">
+            <label class="col-md-6">
+             Departure time:
+            </label>
+          <div class="col-md-4">
+              {{this.selectedBus.DepTime}}
+          </div> 
+         </div> 
+            <div class="col-md-6">
+            <label class="col-md-6">
+             Destination Time: 
+            </label>
+          <div class="col-md-4">
+              {{this.selectedBus.ReachBy}}
+          </div> 
+          </div>
+        <div class="col-md-6">
+            <label class="col-md-6">
+             Tickets: 
+            </label>
+          <div class="col-md-4">
+              {{this.selectedBus.tickets}}
+          </div>
+        </div>
+         <div class="col-md-6">
+             <label class="col-md-6">
+             Total Price:   
+            </label>
+          <div class="col-md-4">
+              {{this.selectedBus.cost}}
+          </div>
+        </div> 
+         <!--<div class="col-md-6">
+             <label class="col-md-4">
+             Contact:   
+            </label>
+          <div class="col-md-8">
+              {{this.selectedBus.phone}}
+          </div>
+        </div> -->
+    </div>
+    <br>
+    <br>
+    <div style="background-color:whitesmoke;border-style:ridge"class="col-md-12">
+    <h3 class="col-md-offset-1">YOU MUST LOGIN TO CONTACT THE PUBLISHER</h3>
+    <hr>
+      <a class="btn btn-success btn-block" (click)="toLogin()" routerLink='/login'>LOGIN</a>
+      <a class="btn btn-success btn-block" routerLink='/register'>SIGN UP</a>      
+    <br>
+    </div>
+    <br>
+</div> 

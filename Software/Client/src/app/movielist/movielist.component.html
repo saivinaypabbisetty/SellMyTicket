@@ -1,0 +1,53 @@
+<div class="container">
+<div class="col-md">
+<h1>Latest Movie Posts:</h1>
+<hr>
+<div id="display-inline-block" (click)="toMovieDetail(movie)" class="panel-group" *ngFor="let movie of list">
+    <article class="panel panel-warning">
+    <div class="panel-heading">
+       <strong>{{movie.name}}</strong>
+    </div>
+    <div class="panel-body">
+    <strong>Date: {{movie.date}}</strong><br><br>
+    <strong>Venue: {{movie.venue}}</strong><br><br> 
+    <strong>ShowTime: {{movie.ShowTime}}</strong><br><br>
+    <strong>Tickets Available: {{movie.tickets}}</strong><br>
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            <strong>PostedBy : </strong>{{movie.PostedBy}}
+        </div>
+        <!--<div class="config panelfooterright">
+           <button type="button" class="btn btn-info">Contact : <strong>{{movie.phone}}</strong></button>
+        </div>-->
+    </footer>
+</article>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="col-md">
+<h1>Recently Added Movie Tickets:</h1>
+<hr>
+<div id="display-inline-block" (click)="toMovieDetail(movie)" class="panel-group" *ngFor="let movie of movielist">
+    <article class="panel panel-warning">
+    <div class="panel-heading">
+       <strong>{{movie.name}}</strong>
+    </div>
+    <div class="panel-body">
+    <strong>Date: {{movie.date}}</strong><br><br>
+    <strong>Venue: {{movie.venue}}</strong><br><br> 
+    <strong>ShowTime: {{movie.ShowTime}}</strong><br><br>
+    <strong>Tickets Available: {{movie.tickets}}</strong><br>
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            <strong>PostedBy : </strong> {{movie.PostedBy}}
+        </div>
+        <!--<div class="config panelfooterright">
+           <button type="button" class="btn btn-info">Contact : <strong>{{movie.phone}}</strong></button>
+        </div>-->
+    </footer>
+</article>
+</div>
+</div> 

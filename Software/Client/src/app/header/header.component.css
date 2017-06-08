@@ -1,0 +1,12 @@
+div ul li a
+{
+color:red;
+}
+#websitelogo{
+    width: 150px;
+    height: 50px;
+}
+#postbutton:active
+{
+background-color:wheat;
+}

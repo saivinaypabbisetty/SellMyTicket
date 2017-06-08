@@ -1,0 +1,22 @@
+[
+    { 
+        "userName":"Vinay",
+        "userId":"saivinay@gmail.com",
+        "password":"pass"
+    
+    },
+    
+    {   
+        "userName":"Sai",
+        "userId":"vinay@gmail.com",
+        "password":"pass"
+    
+    },
+    
+    {   
+        "userName":"Sai Vinay",
+        "userId":"s",
+        "password":"v"
+    
+    }
+]

@@ -1,0 +1,59 @@
+[{
+"name":"Baahubali",
+"ShowTime":{
+  "hours":10,
+  "minutes":35
+          },
+"tickets":4,
+"cost":1000,
+"PostedBy":"Rahul",
+"contact":{
+        "phone":8454248954,
+        "email":"asme@gmail.com"
+}
+}
+,
+{
+"name":"Srimanthudu",
+"ShowTime":{
+  "hours":22,
+  "minutes":15
+},
+"tickets":2,
+"cost":450,
+"PostedBy":"Teja",
+"contact":{
+        "phone":8453484218,
+        "email":"asdsasme@gmail.com"
+}
+},
+{
+"name":"Alien Covenant",
+"ShowTime":{
+  "hours":16,
+  "minutes":50
+},
+"tickets":1,
+"cost":100,
+"PostedBy":"Bhaskar",
+"contact":{
+        "phone":8487248954,
+        "email":"aswade@gmail.com"
+}
+},
+{
+"name":"Luckunnodu",
+"ShowTime":{
+  "hours":18,
+  "minutes":30
+},
+"tickets":3,
+"cost":500,
+"PostedBy":"Prudhvi",
+"contact":{
+        "phone":8454498454,
+        "email":"asmsdse@gmail.com"
+}
+}
+]
+

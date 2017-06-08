@@ -1,0 +1,184 @@
+<div *ngIf='this.currentUser.userId=="null"'>
+<h2><strong>You must login to post your tickets <button routerLink='/login' class="btn btn-warning">Login</button> </strong></h2>
+</div>    
+<div *ngIf='this.currentUser.userId!=="null"'class="col-md-8 col-md-offset-2">  
+     <div class="title">
+     <h2> POST YOUR TICKETS </h2>
+     </div>
+     <br>
+    <label class="control-label" for="category">Which type of Ticket do you want to add?</label>
+     <div class="btn-group"name="category">
+    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"> 
+    Category <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li (click)="showmovieform()"><a>Movie</a></li>
+      <li (click)="showbusform()"><a>Bus</a></li>
+    </ul>
+  </div>
+<br><br>
+    <form *ngIf="showMovieform" [formGroup]="postMovietickets" (ngSubmit)="onMovieSubmit(postmovie)" #postmovie="ngForm">
+        <div class="form-group">
+            <label class="control-label" for="movie_name">Movie Name</label>
+            <div class="controls">
+            <input type="text" id="movie_name" class="form-control" formControlName="movie_name" ngModel name="movie_name" placeholder="Movie Name" onfocus="this.placeholder=''" onblur="this.placeholder='Movie name'"required>
+            </div>
+        </div>
+        <br> 
+        <div class="form-group">
+            <label class="control-label" for="date">Date</label>
+            <div class="controls">
+            <input type="date" id="date" class="form-control" formControlName="date" ngModel name="date" required>
+            </div>
+        </div>
+        <br>
+         <div class="form-group">
+            <label class="control-label" for="venue">Venue</label>
+            <div class="controls">
+            <input type="text" id="venue" class="form-control" formControlName="venue" ngModel name="venue" placeholder="Venue" onfocus="this.placeholder=''" onblur="this.placeholder='Venue'"required>
+            </div>
+        </div>
+        <br>
+         <div class="form-group">
+            <label class="control-label" for="movie_time">Time (24 hour format)</label>
+            <div class="container" id="movie_time">
+            <div class="col-xs-3">
+            Hours: <input type="number" class="form-control" formControlName="hours"ngModel name="hours" min="00" max="23" step="1"value="30"required>
+            </div>
+            <div class="col-xs-3">
+            Minutes: <input type="number" class="form-control"  formControlName="minutes" ngModel name="minutes" min="00" max="59" step="5" value="9"required>
+            </div>
+            </div>
+         </div>
+         <br>
+         <div class="form-group">
+             <label class="control-label"for="tickets">Tickets:</label>
+                <div class="controls">
+                 <select class="form-control" ngModel formControlName="movie_tickets" name="movie_tickets"id="tickets" required>
+                   <option value=1>1</option>
+                   <option value=2>2</option>
+                   <option value=3>3</option>
+                   <option value=4>4</option>
+                   <option value=5>5</option>
+                   <option value=6>6</option>
+                   <option value=7>7</option>
+                   <option value=8>8</option>
+                   <option value=9>9</option>
+                   <option value=10>10</option>                
+                 </select>
+                </div>
+         </div>    
+          <div class="form-group">
+            <label class="control-label" for="cost">Selling Price</label>
+            <div class="controls">
+            <input type="number" id="cost" class="form-control" formControlName="cost" ngModel min=00  max=10000 step="50" name="cost" required>
+            </div>
+         </div>
+         <div class="form-group">
+            <label class="control-label" for="PostedBy">PostedBy</label>
+            <div class="controls">
+            <input type="text" id="PostedBy" class="form-control" formControlName="PostedBy" ngModel name="PostedBy" required>
+            </div>
+        </div>
+          <div class="form-group">
+            <label class="control-label" for="movie_phone">Mobile number</label>
+            <div class="controls">
+            <input type="tel" id="movie_phone" class="form-control" formControlName="movie_phone" ngModel name="movie_phone" required>
+            </div>
+         </div>
+          
+          <div class="formgroup">
+            <div class="controls">
+            <button type="submit" class="btn btn-warning">PUBLISH</button>
+            </div>
+          </div>
+    </form>
+<!--  break  -->
+<form *ngIf="showBusform" [formGroup]="postBustickets" (ngSubmit)="onBusSubmit(postbus)" #postbus="ngForm">
+        <div class="form-group">
+            <label class="control-label" for="from">From</label>
+            <div class="controls">
+            <input type="text" id="from" class="form-control" formControlName="from" ngModel name="from" placeholder="From" required>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="control-label" for="to">To</label>
+            <div class="controls">
+            <input type="text" id="to" class="form-control" formControlName="to" ngModel name="to" placeholder="To" required>
+            </div>
+        </div>
+        <br>
+        <div class="form-group">
+            <label class="control-label" for="date">Travel Date</label>
+            <div class="controls">
+            <input type="date" id="date" class="form-control" formControlName="date" ngModel name="date" required>
+            </div>
+        </div>
+        <br>
+         <div class="form-group">
+            <label class="control-label" for="Deptime">Departure Time (24 hour format)</label>
+            <div class="container" id="Deptime">
+            <div class="col-xs-3">
+            Hours: <input type="number" class="form-control" formControlName="Dephours"ngModel name="Dephours" min="00" max="23" step="1"value="30"required>
+            </div>
+            <div class="col-xs-3">
+            Minutes: <input type="number" class="form-control"  formControlName="Depminutes" ngModel name="Depminutes" min="00" max="59" step="5" value="9"required>
+            </div>
+            </div>
+         </div>
+         <br>
+         <div class="form-group">
+            <label class="control-label" for="ReachBytime">Destination Time (24 hour format)</label>
+            <div class="container" id="ReachBytime">
+            <div class="col-xs-3">
+            Hours: <input type="number" class="form-control" formControlName="ReachByhours"ngModel name="ReachByhours" min="00" max="23" step="1"value="30"required>
+            </div>
+            <div class="col-xs-3">
+            Minutes: <input type="number" class="form-control"  formControlName="ReachByminutes" ngModel name="ReachByminutes" min="00" max="59" step="5" value="9"required>
+            </div>
+            </div>
+         </div>
+         <br>
+         <div class="form-group">
+             <label class="control-label"for="bus_tickets">Tickets:</label>
+                <div class="controls">
+                 <select class="form-control" ngModel formControlName="bus_tickets" name="bus_tickets"id="tickets" required>
+                   <option value=1>1</option>
+                   <option value=2>2</option>
+                   <option value=3>3</option>
+                   <option value=4>4</option>
+                   <option value=5>5</option>
+                   <option value=6>6</option>
+                   <option value=7>7</option>
+                   <option value=8>8</option>
+                   <option value=9>9</option>
+                   <option value=10>10</option>                
+                 </select>
+                </div>
+         </div>    
+          <div class="form-group">
+            <label class="control-label" for="cost">Selling Price</label>
+            <div class="controls">
+            <input type="number" id="cost" class="form-control" formControlName="cost" ngModel min=00  max=10000 step="50" name="cost" required>
+            </div>
+         </div>
+         <div class="form-group">
+            <label class="control-label" for="PostedBy">PostedBy</label>
+            <div class="controls">
+            <input type="text" id="PostedBy" class="form-control" formControlName="PostedBy" ngModel name="PostedBy" required>
+            </div>
+        </div>
+          <div class="form-group">
+            <label class="control-label" for="bus_phone">Mobile number</label>
+            <div class="controls">
+            <input type="tel" id="bus_phone" class="form-control" formControlName="bus_phone" ngModel name="bus_phone" required>
+            </div>
+         </div>
+         <br>
+          
+          <div style="text-align:right;" class="formgroup">
+            <button type="submit" class="btn btn-warning">PUBLISH</button>
+          </div>
+    </form>
+<br><br>
+</div>

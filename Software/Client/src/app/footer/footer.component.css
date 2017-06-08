@@ -1,0 +1,16 @@
+hr { 
+    display: block;
+    margin-top: 1.0em;
+    margin-bottom: 1.0em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+/*footer
+{
+    height: 100px; 
+    line-height: 100px;
+    background-color: #25250e;
+    border-top: 4px solid orange;
+}*/

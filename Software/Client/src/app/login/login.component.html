@@ -1,0 +1,50 @@
+<div class="col-md-8 col-md-offset-2">
+<div class="title">
+ <h2> Login </h2>
+ <hr>
+</div>
+<form [formGroup]="loginform" (ngSubmit)="onSubmit(login)" #login="ngForm">
+  <!--<div class="formgroup">
+    <label class="control-label" for="email">Name
+    <sup style="color:red">*</sup>
+    </label>
+    <div class="controls">
+      <input type="text" class="form-control" name="l_name" ngModel formControlName="l_name"  placeholder="Name">
+    </div>
+  </div>
+  <br>-->
+  <div class="formgroup">
+    <label class="control-label" for="password">
+      Email
+    <sup style="color:red">*</sup>
+    </label>
+    <div class="controls">
+      <input type="text" class="form-control" name="l_email" ngModel formControlName="l_email"  placeholder="Email" required>
+    </div>
+  </div>
+  <br>
+  <div class="formgroup">
+    <label class="control-label" for="password">
+      Password
+    <sup style="color:red">*</sup>    
+    </label>
+    <div class="controls">
+      <input type="password" class="form-control" name="l_password" ngModel formControlName="l_password" placeholder="Password" required>
+    </div>
+  </div>
+  <br>
+  <div style="text-align:right;"class="formgroup">
+    <div class="controls">
+      <button type="submit"class="btn btn-warning btn-lg">Login</button>
+    </div>
+  </div>
+  <br>
+  <p >Don't Have an Account</p>
+   <div class="formgroup">
+    <div class="controls">
+      <button type="submit"routerLink='/register' class="btn btn-link">Register</button>
+    </div>
+  </div>
+</form>
+<br><br>
+</div>

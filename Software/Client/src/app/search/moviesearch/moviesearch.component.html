@@ -1,0 +1,46 @@
+<app-autocomplete></app-autocomplete> 
+<div class="col-md">
+<div class="col-md-8">
+ <ng-select    [allowClear]="true"
+              [items]="names"
+              [disabled]="disabled"
+              (data)="refreshValue($event)"
+              (selected)="selected($event)"
+              (removed)="removed($event)"
+              (typed)="typed($event)" 
+              placeholder="No Movie selected"
+              >
+  </ng-select>
+</div>
+  <form [formGroup]="dateform"(ngSubmit)="onSearch(date)" #date="ngForm">
+  <div class="col-md-3">
+<input class="form-control"type="date" style="color:grey"ngModel formControlName="traveldate" name="traveldate">
+  </div>
+  <div class="col-md-1">
+<button type="submit" class="btn btn-warning">SEARCH</button>
+  </div>
+</form>
+</div>
+  <br><br>
+  <alert type="danger" *ngIf="ticketsNotAvailable" dismissible="true">
+<strong>NO MOVIE TICKETS ARE AVAILABLE ON SELECTED DATE</strong>
+</alert>
+  
+  <div (click)="toMovieDetail(selectedMovie)" class="panel-group"*ngIf="toShow">
+    <article class="panel panel-warning">
+    <div class="panel-heading">
+       <strong>{{selectedMovie.name}}</strong>
+    </div>
+    <div class="panel-body">
+    <strong>Date: {{selectedMovie.date}}</strong><br><br>
+    <strong>Venue: {{selectedMovie.venue}}</strong><br><br> 
+    <strong>ShowTime: {{selectedMovie.ShowTime}}</strong><br><br>
+    <strong>Tickets Available: {{selectedMovie.tickets}}</strong><br>
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            <strong>PostedBy:</strong> {{selectedMovie.PostedBy}}
+        </div>
+    </footer>
+    </article>
+</div>

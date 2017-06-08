@@ -1,0 +1,57 @@
+<div col-md>
+  <div class="col-md-4">
+<ng-select class="col"  [allowClear]="true"
+              [items]="fromNames"
+              [disabled]="disabledfrom"
+              (data)="refreshValuefrom($event)"
+              (selected)="selectedfrom($event)"
+              (removed)="removedfrom($event)"
+              (typed)="typedfrom($event)"
+              placeholder="From">
+           
+</ng-select>
+  </div>
+  <div class="col-md-4">
+<ng-select class="col" [allowClear]="true"
+              [items]="toNames"
+              [disabled]="disabledto"
+              (data)="refreshValueto($event)"
+              (selected)="selectedto($event)"
+              (removed)="removedto($event)"
+              (typed)="typedto($event)"
+              placeholder="To">
+</ng-select>
+</div>
+<form [formGroup]="dateform"(ngSubmit)="onSearch(date)" #date="ngForm">
+  <div class="col-md-3">
+<input class="form-control"type="date" ngModel formControlName="traveldate" name="traveldate">
+  </div>
+  <div class="col-md-1">
+<button type="submit" class="btn btn-warning">SEARCH</button>
+  </div>
+</form>
+
+<br><br><br>
+<alert type="danger" *ngIf="BusesAvailable" dismissible="true">
+<strong>NO BUS TICKETS ARE AVAILABLE ON SELECTED DATE</strong>
+</alert>
+<div *ngIf="toShow">
+<div (click)="fromRecentposttoBusDetail(bus)" class="panel-group" *ngIf="selectedBus">
+   <article class="panel panel-success">
+    <div class="panel-heading">
+       <strong>{{selectedBus.from}} To {{selectedBus.to}}</strong>
+    </div>
+    <div class="panel-body">
+    <strong>Date: {{selectedBus.date}}</strong><br><br>        
+    <strong>Departure Time: {{selectedBus.DepTime}}</strong><br><br>
+    <strong>Destination Time: {{selectedBus.ReachBy}}</strong><br><br>
+    <strong>Tickets Available: {{selectedBus.tickets}}</strong>
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            <strong>PostedBy:</strong>{{selectedBus.PostedBy}}
+        </div>
+    </footer>
+    </article>
+</div>
+</div>

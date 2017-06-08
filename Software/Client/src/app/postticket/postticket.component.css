@@ -1,0 +1,7 @@
+div.col-md-8.col-md-offset-2
+{background-color:whitesmoke;
+border-left: inset;
+border-right:outset;
+border-top:10px solid orange;
+border-bottom: 10px solid orange;
+}

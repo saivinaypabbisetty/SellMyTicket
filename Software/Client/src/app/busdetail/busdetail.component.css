@@ -1,0 +1,13 @@
+div.col-sm-8.col-md-offset-2
+{
+    background-color:whitesmoke;
+    border-left: inset;
+    border-right:outset;
+    border-top:10px solid lightgreen;
+    border-bottom: 5px solid lightgreen;
+}
+hr {
+	height: 10px;
+	border: 0;
+	box-shadow: 0 10px 10px -10px lightgreen inset;
+}

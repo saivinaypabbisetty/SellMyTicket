@@ -1,0 +1,14 @@
+ul li
+{
+color:red;
+}
+div.col-md-4.col-md-offset-4
+
+{
+    background-color: lightgrey
+}
+app-footer
+{
+    background-color: #25250e;
+    border-top: 4px solid orange;
+}

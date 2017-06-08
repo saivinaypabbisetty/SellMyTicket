@@ -1,0 +1,50 @@
+[
+  {
+  "from":"Khammam",
+  "to":"Hyderabad",
+  "date":"2017-06-04",
+  "DepTime":"21:45",
+  "ReachBy":"06:35",
+  "tickets":3,
+  "cost":900,
+  "posted by":"tejaswini",
+  "Contact":"8495422498"
+  },
+  
+  {
+  "from":"Banglore",
+  "to":"Ooty",
+  "date":"2017-06-04",
+  "DepTime":"23:10",
+  "ReachBy":"04:35",
+  "tickets":1,
+  "cost":600,
+  "posted by":"Akhil",
+  "Contact":"8329923498"
+  },
+  
+  {
+  "from":"delhi",
+  "to":"Agra",
+  "date":"2017-06-04",
+  "DepTime":"10:45",
+  "ReachBy":"15:35",
+  "tickets":2,
+  "cost":500,
+  "posted by":"Rohith",
+  "Contact":"8499923498"
+  },
+   
+  {
+  "from":"Kakinada",
+  "to":"Vizag",
+  "date":"2017-06-04",
+  "DepTime":"20:30",
+  "ReachBy":"05:35",
+  "tickets":3,
+  "cost":500,
+  "posted by":"Koushik",
+  "Contact":"9160582345"
+  }
+  
+]

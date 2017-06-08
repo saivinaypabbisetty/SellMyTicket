@@ -1,0 +1,20 @@
+<div class="row no-gutters">
+ <div class="col-12 col-sm-6 col-md-1">    
+<!--<button class="btn btn-warning"(click)="showbussearch()">show</button>-->
+<div class="btn-group">
+    <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+    Category <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu">
+      <li (click)="showmoviesearch()"><a>Movie</a></li>
+      <li class="divider"></li>
+      <li (click)="showbussearch()"><a>Bus</a></li>
+    </ul>
+  </div>
+ </div>
+ <div class="col-6 col-md-11">
+<app-bussearch *ngIf="showBussearch"></app-bussearch>
+<app-moviesearch *ngIf="showMoviesearch"></app-moviesearch>
+</div>
+</div>
+<app-movielist></app-movielist>
+<app-buslist></app-buslist>
