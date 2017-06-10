@@ -1,0 +1,52 @@
+ div.card
+{
+    height: 350px;
+	width:240px;
+	margin:25px;
+}
+div.figure
+{
+	height: 200px;
+	width:250px;
+	text-align: center;
+}
+
+div.card-block
+{   
+	background-color:whitesmoke;
+	height:200px;
+	width:250px;
+	border:1px solid #eaeaea;
+	padding:1.5em;
+	overflow:hidden;
+}
+.icon-wrap
+ {
+  display: inline-block;
+  position: relative;
+}
+.ribbon {
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  height:40px;
+  width:40px;
+}
+.glyphicon.glyphicon-star
+{
+	color:white;
+	font-size:39px;
+}
+.price
+{
+display:inline-block;
+padding: 5px 10px 5px 10px;
+margin-top:10px;
+background-color: orange;
+}
+div.row
+{
+min-height: 430px;
+max-height: 470px;
+}
