@@ -16,7 +16,7 @@ recentBuslist:Bus[]=this._appservice.getBus();
 buslist:Bus[];
 list:Bus[];
 constructor(private _appservice:AppService,private _http:Http,private router:Router,private route:ActivatedRoute){}
-  ngOnInit() 
+  ngOnInit()  
   { 
     this ._appservice.getbuses().subscribe(buslist=>{
                                                     this.buslist=buslist;

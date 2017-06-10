@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{Router,ActivatedRoute,Params,RouterState}from'@angular/router';
 import{Movie} from '../../models/movie.model'
 import{Bus} from '../../models/bus.model'
 import{User} from '../../models/user.model'
@@ -20,13 +21,15 @@ export class PostticketComponent implements OnInit {
  showMovieform:boolean=true;
  showBusform:boolean=false; 
   
-constructor(private _appservice:AppService,_http:Http,private _formBuilder:FormBuilder)
-  {
-      
+constructor(private _appservice:AppService,_http:Http,private _formBuilder:FormBuilder,private router:Router)
+  {   
   }
   ngOnInit() 
   { 
-    
+     if(this.currentUser.userId=="null")
+    {
+      this.router.navigate(['/login']);
+    }
     this.postMovietickets=this._formBuilder.group({
      movie_name:["sai"],
      PostedBy:["vinay"],

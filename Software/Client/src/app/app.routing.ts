@@ -8,10 +8,13 @@ import{ RegisterComponent} from './register/register.component'
 import{ PostticketComponent} from './postticket/postticket.component'
 import{MoviedetailComponent}from './moviedetail/moviedetail.component'
 import{BusdetailComponent}from './busdetail/busdetail.component'
+import{UserdetailComponent} from './userdetail/userdetail.component'
+
 const APP_ROUTES=[  
     {path:'', redirectTo: '/home', pathMatch: 'full' },
     {path: 'home', component: HomeComponent},//furtherly add routes of homecomponent using children:
     {path:'login',component:LoginComponent},
+    {path:'userdetail',component:UserdetailComponent},
     {path:'about',component:AboutComponent},
     {path:'register',component:RegisterComponent},
     {path:'postticket',component:PostticketComponent},

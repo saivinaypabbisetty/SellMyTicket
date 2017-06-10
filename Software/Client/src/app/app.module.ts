@@ -26,6 +26,7 @@ import { MoviedetailComponent } from './moviedetail/moviedetail.component';
 import { BusdetailComponent } from './busdetail/busdetail.component';
 import { BuslistComponent } from './buslist/buslist.component';
 import { AboutComponent } from './about/about.component';
+import { UserdetailComponent } from './userdetail/userdetail.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { AboutComponent } from './about/about.component';
     MoviedetailComponent,
     BusdetailComponent,
     BuslistComponent,
-    AboutComponent
+    AboutComponent,
+    UserdetailComponent
   ],
   imports: [
     BrowserModule,

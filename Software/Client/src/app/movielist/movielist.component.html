@@ -1,53 +1,78 @@
-<div class="container">
+<!--<div class="container">
 <div class="col-md">
 <h1>Latest Movie Posts:</h1>
 <hr>
-<div id="display-inline-block" (click)="toMovieDetail(movie)" class="panel-group" *ngFor="let movie of list">
+<div (click)="toMovieDetail(movie)" class="panel-group" *ngFor="let movie of list">
     <article class="panel panel-warning">
-    <div class="panel-heading">
+    <div class="panel-heading movie">
        <strong>{{movie.name}}</strong>
     </div>
-    <div class="panel-body">
+    <div style="background-color:lightyellow"class="panel-body">
     <strong>Date: {{movie.date}}</strong><br><br>
     <strong>Venue: {{movie.venue}}</strong><br><br> 
     <strong>ShowTime: {{movie.ShowTime}}</strong><br><br>
     <strong>Tickets Available: {{movie.tickets}}</strong><br>
     </div>
-    <footer class="panel-footer">
-        <div class="author">
+    <div class="panel-footer movie">
             <strong>PostedBy : </strong>{{movie.PostedBy}}
-        </div>
-        <!--<div class="config panelfooterright">
-           <button type="button" class="btn btn-info">Contact : <strong>{{movie.phone}}</strong></button>
-        </div>-->
-    </footer>
+    </div>
 </article>
 </div>
 </div>
-</div>
+</div>-->
+
+
 <div class="container">
 <div class="col-md">
-<h1>Recently Added Movie Tickets:</h1>
+<h1>Latest Movie Tickets:</h1>
 <hr>
-<div id="display-inline-block" (click)="toMovieDetail(movie)" class="panel-group" *ngFor="let movie of movielist">
-    <article class="panel panel-warning">
-    <div class="panel-heading">
-       <strong>{{movie.name}}</strong>
-    </div>
-    <div class="panel-body">
-    <strong>Date: {{movie.date}}</strong><br><br>
-    <strong>Venue: {{movie.venue}}</strong><br><br> 
-    <strong>ShowTime: {{movie.ShowTime}}</strong><br><br>
-    <strong>Tickets Available: {{movie.tickets}}</strong><br>
-    </div>
-    <footer class="panel-footer">
-        <div class="author">
-            <strong>PostedBy : </strong> {{movie.PostedBy}}
-        </div>
-        <!--<div class="config panelfooterright">
-           <button type="button" class="btn btn-info">Contact : <strong>{{movie.phone}}</strong></button>
-        </div>-->
-    </footer>
-</article>
 </div>
-</div> 
+</div>
+        
+    <div  class="row ">
+  <div  *ngFor="let movie of list" class="card col-sm-3">
+      <div class="figure text-center">
+         <figure class="icon-wrap">
+          <img style="margin:0px auto;display:block" src="../../assets/242x200.png" alt="can't load movie img"class="img-ressponsive icon">
+          <span class="ribbon" style="background-color:green"><span class="glyphicon glyphicon-star"></span></span>
+         </figure>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{movie.name}}</h4>
+
+        <div class="card-text-center">Date: {{movie.date}}</div>
+        <div class="card-text-center">Venue: {{movie.venue}}</div>
+        <div class="card-text-center">ShowTime: {{movie.ShowTime}}</div>
+        <div class="card-text-center">Tickets Available: {{movie.tickets}}</div>
+        <span class="price">{{movie.cost}}₹</span>
+      </div>
+    </div>
+</div>
+  
+
+<div class="container">
+<div class="col-md">
+<h1>Recent Movie Tickets:</h1>
+<hr>
+</div>
+</div>
+        
+    <div  class="row ">
+  <div  *ngFor="let movie of movielist" class="card col-sm-3">
+      <div class="figure text-center">
+         <figure class="icon-wrap">
+          <img style="margin:0px auto;display:block" src="../../assets/242x200.png" alt="can't load movie img"class="img-ressponsive icon">
+          <span class="ribbon" style="background-color:green"><span class="glyphicon glyphicon-star"></span></span>
+         </figure>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{movie.name}}</h4>
+
+        <div class="card-text-center">Date: {{movie.date}}</div>
+        <div class="card-text-center">Venue: {{movie.venue}}</div>
+        <div class="card-text-center">ShowTime: {{movie.ShowTime}}</div>
+        <div class="card-text-center">Tickets Available: {{movie.tickets}}</div>
+        <span class="price">{{movie.cost}}₹</span>
+      </div>
+    </div>
+</div>

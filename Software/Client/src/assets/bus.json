@@ -7,7 +7,7 @@
   "ReachBy":"06:35",
   "tickets":3,
   "cost":900,
-  "PostedBy":"tejaswini",
+  "PostedBy":"Sai Vinay",
   "phone":"8495422498"
   },
   
@@ -19,7 +19,7 @@
   "ReachBy":"04:35",
   "tickets":1,
   "cost":600,
-  "PostedBy":"Akhil",
+  "PostedBy":"Sai Vinay",
   "phone":"8329923498"
   },
   
@@ -45,6 +45,5 @@
   "cost":500,
   "PostedBy":"Koushik",
   "phone":"9160582345"
-  }
-  
+  } 
 ]

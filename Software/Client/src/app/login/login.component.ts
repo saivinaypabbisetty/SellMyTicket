@@ -46,17 +46,14 @@ l_password:[]
              this.currentUser.password=user.password;
              this.currentUser=user;  
            this.router.navigate(['/postticket']);
-           console.log(this.route.parent);
-           console.log(this.route.pathFromRoot);
-           console.log(this.route.parent);
        }
     
     }
-    if(this._appservice.isLoggedin)
-    {
-      this.url=this._appservice.redirectUrl
-      this.router.navigate([this.url]);
-    }
+    // if(this._appservice.isLoggedin)
+    // {
+    //   this.url=this._appservice.redirectUrl
+    //   this.router.navigate([this.url]);
+    // }
     
     form.resetForm();
  }

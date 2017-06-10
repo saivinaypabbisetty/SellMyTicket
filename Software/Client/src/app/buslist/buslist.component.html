@@ -1,52 +1,99 @@
-
-<div class="container">
+<!--<div class="container">
 <div class="col-md">
 <h1>Latest Bus Posts:</h1>
 <hr>
 <div (click)="toBusDetail(bus)" class="panel-group" *ngFor="let bus of list">
-   <article class="panel panel-success">
-    <div class="panel-heading">
+   <article class="panel panel-success ">
+    <div class="panel-heading bus">
        <strong>{{bus.from}} To {{bus.to}}</strong>
     </div>
-    <div class="panel-body">
+    <div style="background-color:#e6ffe6"class="panel-body">
     <strong>Travel Date: {{bus.date}}</strong><br><br>
     <strong>Departure Time: {{bus.DepTime}}</strong><br><br>
     <strong>Destination Time: {{bus.ReachBy}}</strong><br><br>
     <strong>Tickets Available: {{bus.tickets}}</strong>
     </div>
-    <footer class="panel-footer">
-        <div class="author">
+    <div class="panel-footer">
             <strong>PostedBy : </strong> {{bus.PostedBy}}
-        </div>
-        <!--<div class="config">
-           <button type="button" class="btn btn-info">Contact : <strong>{{bus.phone}}</strong></button>
-        </div>-->
-    </footer>
+    </div>
     </article>
 </div>
 </div>
+</div>-->
+
+<div class="container">
+<div class="col-md">
+<h1>Latest Bus Tickets:</h1>
+<hr>
 </div>
+</div>
+        
+    <div  class="row ">
+  <div  *ngFor="let bus of list" class="card col-sm-3">
+      <div class="figure text-center">
+         <figure class="icon-wrap">
+          <img style="margin:0px auto;display:block" src="../../assets/242x200.png" alt="can't load movie img"class="img-ressponsive icon">
+          <span class="ribbon" style="background-color:green"><span class="glyphicon glyphicon-star"></span></span>
+         </figure>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{bus.from}} To {{bus.to}}</h4>
+
+        <div class="card-text-center">Travel Date: {{bus.date}}</div>
+        <div class="card-text-center">Departure Time: {{bus.DepTime}}</div>
+        <div class="card-text-center">Destination Time: {{bus.ReachBy}}</div>
+        <div class="card-text-center">Tickets Available: {{bus.tickets}}</div>
+        <span class="price">{{bus.cost}}₹</span>
+      </div>
+    </div>
+</div>
+  
+<!--     
+<div class="card"*ngFor="let bus of list">
+    <div class="row col">
+          <div class="figure">
+              <figure class="icon-wrap">
+                  <img src="../../assets/242x200.png" alt="can't load movie img"class="img-ressponsive icon">
+                  <span class="ribbon" style="background-color:green"><span class="glyphicon glyphicon-star"></span></span>              
+              </figure>
+          </div>
+          <div class="card-block">
+              <h4 class="card-title">{{bus.from}} To {{bus.to}}</h4>
+              <div class="card-text">Travel Date: {{bus.date}}</div>
+              <div class="card-text">Departure Time: {{bus.DepTime}}</div>
+              <div class="card-text">Destination Time: {{bus.ReachBy}}</div>
+              <div class="card-text">Tickets Available: {{bus.tickets}}</div>
+          </div>
+    </div>
+</div>-->
+
+
+
+
 <div class="container">
 <div class="col-md">
 <h1>Recently Added Bus Tickets:</h1>
 <hr>
-<div (click)="toBusDetail(bus)" class="panel-group" *ngFor="let bus of recentBuslist">
-   <article class="panel panel-success">
-    <div class="panel-heading">
-       <strong>{{bus.from}} To {{bus.to}}</strong>
+</div>
+</div>
+<div  class="row">
+  <div  *ngFor="let bus of recentBuslist" class="card col-sm-3">
+      <div class="figure textcenter">
+      <figure class="icon-wrap">
+       <img style="margin:0px auto;display:block" src="../../assets/242x200.png" alt="can't load movie img"class="img-ressponsive icon">
+       <span class="ribbon" style="background-color:green"><span class="glyphicon glyphicon-star"></span></span>
+      </figure>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{bus.from}} To {{bus.to}}</h4>
+
+        <div class="card-text-center">Travel Date: {{bus.date}}</div>
+        <div class="card-text-center">Departure Time: {{bus.DepTime}}</div>
+        <div class="card-text-center">Destination Time: {{bus.ReachBy}}</div>
+        <div class="card-text-center">Tickets Available: {{bus.tickets}}</div>
+        <span class="price">{{bus.cost}}₹</span>
+      </div>
     </div>
-    <div class="panel-body">
-    <strong>Date: {{bus.date}}</strong><br><br>        
-    <strong>Departure Time: {{bus.DepTime}}</strong><br><br>
-    <strong>Destination Time: {{bus.ReachBy}}</strong><br><br>
-    <strong>Tickets Available: {{bus.tickets}}</strong>
-    </div>
-    <footer class="panel-footer">
-        <div class="author">
-            <strong>PostedBy : </strong> {{bus.PostedBy}}
-        </div>
-    </footer>
-    </article>
-</div>
-</div>
-</div>
+</div>  
+<br>
+<br>
