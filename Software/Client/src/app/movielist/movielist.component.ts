@@ -37,9 +37,5 @@ toMovieDetail(movie:Movie)
     {
       this.router.navigate(['/home',movie.name]); //THIS IS ABSOLUTE NAVIGATION
     }
-fromRecentposttoMovieDetail(recentMovie:Movie)
-{
-   this.router.navigate(['/home',recentMovie.name]);
-}
 
 }

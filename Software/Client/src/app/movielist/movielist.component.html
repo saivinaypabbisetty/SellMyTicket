@@ -30,7 +30,7 @@
 </div>
         
     <div  class="row ">
-  <div  *ngFor="let movie of list" class="card col-sm-3">
+  <div (click)="toMovieDetail(movie)" *ngFor="let movie of list" class="card col-sm-3">
       <div class="figure text-center">
          <figure class="icon-wrap">
           <img style="margin:0px auto;display:block" src="../../assets/242x200.png" alt="can't load movie img"class="img-ressponsive icon">
@@ -58,7 +58,7 @@
 </div>
         
     <div  class="row ">
-  <div  *ngFor="let movie of movielist" class="card col-sm-3">
+  <div (click)="toMovieDetail(movie)" *ngFor="let movie of movielist" class="card col-sm-3">
       <div class="figure text-center">
          <figure class="icon-wrap">
           <img style="margin:0px auto;display:block" src="../../assets/242x200.png" alt="can't load movie img"class="img-ressponsive icon">
