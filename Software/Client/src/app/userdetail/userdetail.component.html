@@ -1,0 +1,72 @@
+<!--<div class="row">
+<h2 class="col-md col-md-offset-4 page-header">Your Movie Posts</h2>
+<div class="col-md-4 col-md-offset-4 panel-group" *ngFor="let movie of loggedUserMovies">
+    <article class="panel panel-warning">
+    <div class="panel-heading movie">
+       <strong>{{movie.name}}</strong>
+    </div>
+    <div style="background-color:lightyellow"class="panel-body">
+    <strong>Venue: {{movie.venue}}</strong><br>
+    <strong>ShowTime: {{movie.ShowTime}}</strong><br>
+    <strong>Tickets Available: {{movie.tickets}}</strong><br>
+    </div>
+    <div class="panel-footer movie">
+      <strong>Date: {{movie.date}}</strong>
+    </div>
+</article>
+</div>
+</div>-->
+
+<div class="container">
+<div class="col-md">
+<h1>Your Movie Posts:</h1>
+<hr>
+</div>
+</div>
+        
+    <div  class="row ">
+  <div (click)="toMovieDetail(movie)" *ngFor="let movie of loggedUserMovies" class="card col-sm-3">
+      <div class="figure text-center">
+         <figure class="icon-wrap">
+          <img style="margin:0px auto;display:block" src="../../assets/242x200.png" alt="can't load movie img"class="img-ressponsive icon">
+          <span class="ribbon" style="background-color:green"><span class="glyphicon glyphicon-star"></span></span>
+         </figure>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{movie.name}}</h4>
+
+        <div class="card-text-center">Date: {{movie.date}}</div>
+        <div class="card-text-center">Venue: {{movie.venue}}</div>
+        <div class="card-text-center">ShowTime: {{movie.ShowTime}}</div>
+        <div class="card-text-center">Tickets Available: {{movie.tickets}}</div>
+        <span class="price">{{movie.cost}}₹</span>
+      </div>
+    </div>
+</div>
+
+<div class="container">
+<div class="col-md">
+<h1>Your Bus Posts:</h1>
+<hr>
+</div>
+</div>
+        
+<div  class="row ">
+  <div (click)="toMovieDetail(movie)" *ngFor="let movie of loggedUserBuses" class="card col-sm-3">
+      <div class="figure text-center">
+         <figure class="icon-wrap">
+          <img style="margin:0px auto;display:block" src="../../assets/242x200.png" alt="can't load movie img"class="img-ressponsive icon">
+          <span class="ribbon" style="background-color:green"><span class="glyphicon glyphicon-star"></span></span>
+         </figure>
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{movie.name}}</h4>
+
+        <div class="card-text-center">Date: {{movie.date}}</div>
+        <div class="card-text-center">Venue: {{movie.venue}}</div>
+        <div class="card-text-center">ShowTime: {{movie.ShowTime}}</div>
+        <div class="card-text-center">Tickets Available: {{movie.tickets}}</div>
+        <span class="price">{{movie.cost}}₹</span>
+      </div>
+    </div>
+</div>
