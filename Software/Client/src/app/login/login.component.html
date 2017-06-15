@@ -3,6 +3,14 @@
  <h2> Login </h2>
  <hr>
 </div>
+<alert type="danger" *ngIf="LoginIncorrect" dismissible="true">
+<strong>YOUR LOGIN CREDENTIALS ARE INCORRECT</strong>
+<strong>PLEASE TRY AGAIN CORRECTLY BY ENTERING YOUR REGISTERED EMAIL CREDENTIALS</strong>
+</alert>
+<alert type="danger" *ngIf="LoginEmpty" dismissible="true">
+<strong>EMAIL AND PASSWORD SHOULD NOT BE EMPTY</strong>
+<strong>PLEASE ENTER YOUR REGISTERED EMAIL AND PASSWORD CORRECTLY</strong>
+</alert>
 <form [formGroup]="loginform" (ngSubmit)="onSubmit(login)" #login="ngForm">
   <!--<div class="formgroup">
     <label class="control-label" for="email">Name

@@ -12,6 +12,7 @@ import{AppService} from '../app.service'
 export class MovielistComponent implements OnInit {
   list:Movie[];
   mlist:Movie[];
+  star:boolean=false;
   movielist:Movie[]= this._appservice.getMovie();
 
  

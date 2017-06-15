@@ -11,6 +11,7 @@ div.card
     height: 350px;
 	width:240px;
 	margin:25px;
+	margin-bottom: 40px;
 }
 div.figure
 {
@@ -21,7 +22,8 @@ div.figure
 
 div.card-block
 {   
-	background-color:whitesmoke;
+	background-color: #3333ff;
+    color:white;
 	height:200px;
 	width:250px;
 	border:1px solid #eaeaea;
@@ -34,7 +36,7 @@ div.card-block
   position: relative;
 }
 .ribbon {
-  position: absolute;
+  position: absolute; 	
   display: block;
   top: 0;
   right: 0;
